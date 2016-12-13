@@ -53,6 +53,7 @@ body{
     background-repeat: no-repeat;
     background-size: cover;
     position: relative;
+    padding-bottom:2em !important;
 }
 
 /*    Zero left    */
@@ -221,56 +222,100 @@ body{
 	text-align: center;
 }
 
-/*    section tab   */
-.tab-list {
-	padding-top: 1em;
-    padding-bottom: 1.5em;
-    padding: 2em 22em;
-    text-align: center;
-}
-.nav-tabs {
-	border-style: none;
-}
-.tab-list ul{
-/*
-	border: 1px solid #3399cc;
-    border-radius: 5px;
-*/
-}
-.tab-list li{
-	min-width: 9em !important;
-    border: 1px solid #3399cc;
+.section-three-tab {
+    padding-top: 1.8em;
 }
 
-.tab-list li:nth-child(1){
+/*    tab     */
+.tab_list {
+	padding: 0 21em 0 21em;
+}
+
+.tabs {
+	margin: 0;
+	padding: 0;
+    padding-left: 27%;
+	float: left;
+    font-size: 1.12em;
+}
+
+@media screen and (min-width:500px) {
+    .tabs {
+         padding-left: 13%;   
+    }
+}
+
+@media screen and (min-width:1000px) {
+    .tabs {
+         padding-left: 22%;   
+    }
+}
+
+@media screen and (min-width:1260px) {
+    .tabs {
+         padding-left: 27%;   
+    }
+}
+
+@media screen and (min-width:1441px) {
+    .tabs {
+         padding-left: 29%;   
+    }
+}
+
+@media screen and (min-width:1600px) {
+    .tabs {
+         padding-left: 31%;   
+    }
+}
+
+@media screen and (min-width:1700px) {
+    .tabs {
+         padding-left: 32%;   
+    }
+}
+
+.tabs li {
+	float: left;
+	margin: 0;
+	cursor: pointer;
+	padding: 0.26em 2em;
+	border: 1px solid #3399cc;
+	background-color: #fff;
+	overflow: hidden;
+	position: relative;
+}
+
+.tabs li:nth-child(1) {
     border-right-style: none;
 }
 
-.tab-list li:nth-child(3){
+.tabs li:nth-child(3) {
     border-left-style: none;
 }
 
-.tab-list li a:hover{
+.tabs li:hover {
 	background-color: #3399cc;
-    color: #fff;
+	color: #fff;
 }
 
-.tab-list li a:active{
+.tabs li.active {
 	background-color: #3399cc;
-    color: #fff;
+	color: #fff;
+	display: block;
 }
 
-.tab-active{
-    background-color: #3399cc !important;
+.tab_container {
+	clear: both;
+	float: left;
+	width: 100%;
+	background: #fff;
+	overflow: auto;
 }
 
-.nav-tabs>li.active>a{
-    color:white !important;
-    background-color: #3399cc !important;
-    border:none !important;
-    border-bottom:none !important;
-    border-radius:0;    
-
+.tab_content {
+	padding: 2em 1.1em 1em 1.1em;
+	display: none;
 }
 
 /*    acordion   */
@@ -473,6 +518,7 @@ thead {
     position: absolute;
    
 }
+
 .section-six-img > p {
     margin-bottom:-30px !important;
 }
@@ -513,7 +559,7 @@ thead {
     color: #fff;
     font-size: 1.3em;
     height: 11.9em;
-    padding: 0em 0 0em 0;
+    padding: 0;
 }
 
 .section-seven-details ul{

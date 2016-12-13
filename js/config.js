@@ -14,12 +14,26 @@ $(document).ready(function() {
             $(this).siblings('.content').slideDown(200);
         }
     });
+
+//Tab Js
+    $(".tab_content").hide();
+    $(".tab_content:first").show();
+
+// if in tab mode 
+    $("ul.tabs li").click(function() {
+		
+        $(".tab_content").hide();
+        var activeTab = $(this).attr("rel"); 
+        $("#"+activeTab).fadeIn();		
+
+        $("ul.tabs li").removeClass("active");
+        $(this).addClass("active");
+
+        $(".tab_drawer_heading").removeClass("d_active");
+        $(".tab_drawer_heading[rel^='"+activeTab+"']").addClass("d_active");
+	  
+    });
+	
+    $('ul.tabs li').last().addClass("tab_last");    
     
-    $('.nav-tabs a[href="#pg"]').tab('show');
-      $(".nav-tabs > li > a").on("click", function() {
-        if ($(this).hasClass('tab-active')) {
-            $(this).removeClass("tab-active");
-        }
-        
-      });
 });
